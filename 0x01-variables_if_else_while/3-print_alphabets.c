@@ -15,5 +15,7 @@ int main(void)
 		putchar(c); /* prints lowercase */
 	for (c = 'A'; c <= 'Z'; c++)
 		putchar(c); /* print uppercase */
-	putchar('\n'); /* print new line */
+	putchar('\n'); /* print newline*/
+
+	return (0);
 }
