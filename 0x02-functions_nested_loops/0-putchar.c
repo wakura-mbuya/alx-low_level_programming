@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * main - Entry point
  *
@@ -5,7 +6,7 @@
  * followed by a new line
  * Return: Always 0 (Success)
  */
-void main()
+int main()
 {
 	_putchar('_');
 	_putchar('p');
