@@ -11,9 +11,9 @@ int main(void)
 	int n;
 	char k;
 
-	for (n = 0; n < 10; n++)
+	for (n = 48; n < 58; n++)
 		putchar(n);
-	for (k = 'a'; k <= 'z'; k++)
+	for (k = 'a'; k <= 'f'; k++)
 		putchar(k);
 	putchar('\n');
 	return (0);
