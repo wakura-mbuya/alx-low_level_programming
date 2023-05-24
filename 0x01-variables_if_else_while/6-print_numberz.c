@@ -15,7 +15,7 @@ int main(void)
 	{
 		putchar(k);
 	}
-	putchar(X'0A');
+	putchar(10);
 
 	return (0);
 }
