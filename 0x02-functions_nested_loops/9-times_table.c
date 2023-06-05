@@ -25,11 +25,13 @@ void printnumber(int n)
 	/* print 0 */
 	if (n == 0)
 	{
+		_putchar(32);
 		_putchar('0');
 	}
 	/* print values of n 0 < n < 10 */
 	else if ((n > 0) && (n < 10))
 	{
+		_putchar(32);
 		_putchar(n % 10 + '0');
 	}
 	/* print values of 10 <= n < 100 */
