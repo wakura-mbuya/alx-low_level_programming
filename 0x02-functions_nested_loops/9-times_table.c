@@ -2,6 +2,33 @@
 #include <stdio.h>
 
 /**
+ * printnumber - prints an integer using _putchar function
+ * @n: the integer to be printed
+ * Author: user3858 on stackoverflow
+ * Replaced the putchar(int n) in the original function with _putchar(int in)
+ */
+void printnumber(int n)
+{
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+
+	if (n == 0)
+	{
+		_putchar('0');
+	}
+
+	if (n / 10)
+	{
+		printnumber(n / 10);
+	}
+
+	_putchar(n % 10 + '0');
+}
+
+/**
  * times_table - Prints the 9 times table, starting with 0
  *
  */
@@ -14,7 +41,8 @@ void times_table(void)
 	{
 		for (j = 0; j < 10; ++j)
 		{
-			printf("%d", i*j);
+			_putchar(i * j);
+
 			if (count < 10)
 			{
 			_putchar(',');
