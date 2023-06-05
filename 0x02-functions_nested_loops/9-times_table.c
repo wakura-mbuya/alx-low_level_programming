@@ -64,7 +64,7 @@ void times_table(void)
 		{
 			printnumber(i * j);
 
-			if (count < 9 )
+			if (count < 9)
 			{
 			_putchar(',');
 			_putchar(' ');
