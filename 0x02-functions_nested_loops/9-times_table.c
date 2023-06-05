@@ -4,28 +4,47 @@
 /**
  * printnumber - prints an integer using _putchar function
  * @n: the integer to be printed
- * Author: user3858 on stackoverflow
- * Replaced the putchar(int n) in the original function with _putchar(int in)
+ * Author: wakura-mbuya
+ * Description: This function prints an integer in the range 0 - 100
+ * using the _putchar function.
+ * This function uses the definition of "printnumber(n)" function
+ * written by user3858 on StackOverflow. Replaced the putchar(int n)
+ * in the original function with _putchar(int n)
+ * This function also modifies the original function
+ * to be able to print upto 3 digits
  */
 void printnumber(int n)
 {
+	/* for handling negative values of n*/
 	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
 	}
 
+	/* print 0 */
 	if (n == 0)
 	{
 		_putchar('0');
 	}
-
-	if (n / 10)
+	/* print values of n 0 < n < 10 */
+	else if ((n > 0) && (n < 10))
 	{
-		printnumber(n / 10);
+		_putchar(n % 10 + '0');
 	}
+	/* print values of 10 <= n < 100 */
+	else if ((n >= 10) && (n < 100))
+	{
+		_putchar(n / 10 + '0');
+		_putchar(n % 10 + '0');
+	}
+	/*print values on n >= 100 */
+	else
+	{
+		_putchar(n / 100 + '0');
+		_putchar(n / 10 + '0');
+		_putchar(n % 10 + '0');
 
-	_putchar(n % 10 + '0');
 }
 
 /**
