@@ -63,14 +63,18 @@ void times_table(void)
 		for (j = 0; j < 10; ++j)
 		{
 			printnumber(i * j);
+			count++;
 
-			if (count < 9)
+			if (count <= 9)
 			{
 			_putchar(',');
 			_putchar(' ');
 			}
+			else
+			{
+				_putchar('\n');
+				count = 0;
+			}
 		}
-		_putchar('\n');
-		count++;
 	}
 }
