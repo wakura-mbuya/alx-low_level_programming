@@ -60,7 +60,7 @@ void times_table(void)
 	{
 		for (j = 0; j < 10; ++j)
 		{
-			_putchar(i * j);
+			printtable(i * j);
 
 			if (count < 10)
 			{
