@@ -9,9 +9,9 @@
  * Even if the program is renamed, it will print the new name
  * Return: 0 (success)
  */
-int main(int argc, char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
-	puts(argv[0]);
+	printf("%s\n", argv[0]);
 
 	return (0);
 }
