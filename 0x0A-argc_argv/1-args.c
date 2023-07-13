@@ -8,6 +8,7 @@
  * when the program is executed. Technically, the name of the program
  * is also an argument but in this program, it is not counted as an
  * argument
+ * Return: 0 (success)
  */
 int main(int argc, char *argv[] __attribute__((unused)))
 {
