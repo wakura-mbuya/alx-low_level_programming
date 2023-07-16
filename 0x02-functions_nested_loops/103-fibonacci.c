@@ -18,18 +18,14 @@ int main(void)
 	num1 = 1;
 	num2 = 2;
 	sum = 2;
-	
-	do
-	{
+	do {
 		fib = num1 + num2;
 		num1 = num2;
 		num2 = fib;
 
 		if (!(fib % 2) && fib < 4000000)
 			sum += fib;
-	}
-	while (fib < 4000000);
-
+	} while (fib < 4000000);
 	printf("%ld\n", sum);
 
 	return (0);
