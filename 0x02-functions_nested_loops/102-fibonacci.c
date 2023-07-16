@@ -19,7 +19,7 @@ int main(void)
 	printf("%ld, %ld, ", num1, num2);
 	count = 2;
 
-	while (count <= 50)
+	while (count < 50)
 	{
 		fib = num1 + num2;
 		num1 = num2;
