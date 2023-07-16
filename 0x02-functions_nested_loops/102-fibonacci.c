@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-	long num1, fib, num2;
+	long int num1, fib, num2;
 	int count;
 
 	num1 = 1;
