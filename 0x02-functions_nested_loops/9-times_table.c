@@ -23,6 +23,11 @@ void times_table(void)
 			}
 			else
 			{
+				if (k < 10 && count > 0)
+				{
+					_putchar(' ');
+				}
+
 				_putchar('0' + k / 10);
 				_putchar('0' + k % 10);
 			}
@@ -38,10 +43,6 @@ void times_table(void)
 			{
 				_putchar('\n');
 				count = 0;
-			}
-			if (k < 10 && count > 0)
-			{
-				_putchar(' ');
 			}
 		}
 	}
