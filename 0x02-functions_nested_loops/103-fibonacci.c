@@ -31,5 +31,7 @@ int main(void)
 	while (fib < 4000000);
 
 	printf("%ld\n", sum);
+
+	return (0)
 }
 
