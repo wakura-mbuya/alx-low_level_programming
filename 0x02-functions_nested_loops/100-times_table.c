@@ -11,56 +11,23 @@
  */
 void print_times_table(int n)
 {
-	int i, j, k, count, l;
+	int i, j;	/* for iterating in the loops */
+	int count;	/* for counting items printed per line */
 
 	if (n < 0 || n > 15)
 		return;
+
 	for (i = 0; i <= n; i++)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			k = i * j;
-			if (k < 10)	/* print values of k (0 - 9) */
-			{
-				if (count > 0 && count < n)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-				}
-				printf("%d", k);
-			}
-			else if (k < 100)
-			{
-				if (count > 0 && count < n)
-				{
-					_putchar(' ');
-					_putchar(' ');
-				}
-				_putchar('0' + k / 10);
-				_putchar('0' + k % 10);
-			}
-			else
-			{
-				if (count > 0 && count < n)
-					_putchar(' ');
-
-				l = k % 100;
-				_putchar('0' + k / 100);
-				_putchar('0' + l / 10);
-				_putchar('0' + l % 10);
-			}
+			print("%3d", i * j);
 			count++;
+
 			if (count <= n)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+				printf(", ");
 			else
-			{
-				_putchar('\n');
-				count = 0;
-			}
+				printf("\n");
 		}
 	}
 }
