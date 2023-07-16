@@ -34,7 +34,7 @@ void print_times_table(int n)
 			else if (k < 100)
 			{
 				if (count > 0 && count <= n)
-					printf(" %d", k);
+					printf("  %d", k);
 				else
 					printf("%d", k);
 			}
