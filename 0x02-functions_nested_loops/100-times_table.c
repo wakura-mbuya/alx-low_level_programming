@@ -24,17 +24,16 @@ void print_times_table(int n)
 		for (j = 0; j <= n; j++)
 		{
 			k = i * j;
-			
-			if ( k < 10)
+			if (k < 10)
 			{
-				if (count > 0 && count < n)
+				if (count > 0 && count <= n)
 					printf("   %d", k);
 				else
 					printf("%d", k);
 			}
-			else if(k < 100)
+			else if (k < 100)
 			{
-				if (count > 0 && count < n)
+				if (count > 0 && count <= n)
 					printf(" %d", k);
 				else
 					printf("%d", k);
