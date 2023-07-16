@@ -39,7 +39,7 @@ void times_table(void)
 				_putchar('\n');
 				count = 0;
 			}
-			if (k < 10)
+			if (k < 10 && count > 0)
 			{
 				_putchar(' ');
 			}
