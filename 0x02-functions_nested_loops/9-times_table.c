@@ -31,14 +31,17 @@ void times_table(void)
 
 			if (count <= 9)
 			{
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
+				_putchar(',');
+				_putchar(' ');
 			}
 			else
 			{
 				_putchar('\n');
 				count = 0;
+			}
+			if (k < 10)
+			{
+				_putchar(' ');
 			}
 		}
 	}
