@@ -13,6 +13,7 @@ void print_times_table(int n)
 {
 	int i, j;	/* for iterating in the loops */
 	int count;	/* for counting items printed per line */
+	int k;		/* for the product */
 
 	if (n < 0 || n > 15)
 		return;
@@ -22,7 +23,24 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			printf("%3d", i * j);
+			k = i * j;
+			
+			if ( k < 10)
+			{
+				if (count > 0 && count < n)
+					printf("   %d", k);
+				else
+					printf("%d", k);
+			}
+			else if(k < 100)
+			{
+				if (count > 0 && count < n)
+					print(" %d", k);
+				else
+					printf("%d", k);
+			}
+			else
+				printf("%4d", k);
 			count++;
 
 			if (count <= n)
