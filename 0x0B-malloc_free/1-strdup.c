@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * _strdup - returns a pointer to a duplicate to a string
@@ -26,7 +28,7 @@ char *_strdup(char *str)
 
 	while (i < strlen(str))
 	{
-		if (i >= 0 && i < strlen(arr))
+		if (i < strlen(arr))
 			arr[i] = str[i];
 		else
 		{
