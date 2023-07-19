@@ -17,26 +17,27 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int i;
+	unsigned int i, j;
 	char *arr;
 
 	if (str == NULL)
 		return (NULL);
 
-	arr = (char *)malloc(sizeof(str) + sizeof('\n'));
-	i = 0;
+	/* get the length of the string */
+	for (i = 0; str[i] != '\0'; i++)
+		;
 
-	while (i < strlen(str))
+	arr = (char *)malloc(sizeof(char) * (i + 1));
+
+	/* check if memory allocation was successful */
+	if (str == NULL)
+		return (NULL);
+
+	j = 0;
+	while (j <= i)
 	{
-		if (i < strlen(arr))
-			arr[i] = str[i];
-		else
-		{
-			free(arr);
-			return (NULL);
-		}
-		i++;
+		arr[j] = str[j];
+		j++;
 	}
-
 	return (arr);
 }
