@@ -16,12 +16,12 @@
 char *create_array(unsigned int size, char c)
 {
 	char *arr;
-	int i;
+	unsigned int i;
 
 	if (size == 0)
 		return (NULL);
 
-	char *arr = (char *)malloc(sizeof(char) * size);
+	arr = (char *)malloc(sizeof(char) * size);
 
 	/* check if the memory declaration was successful */
 	if (arr == NULL)
@@ -30,5 +30,5 @@ char *create_array(unsigned int size, char c)
 	for (i = 0; i < size; i++)
 		arr[i] = c;
 
-	return (&arr);
+	return (arr);
 }
