@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		sum = 0;
-		for (i = 2; i < argc; i++)
+		sum  = 0;
+		for (i = 1; i < argc; i++)
 		{
 			num = strtol(argv[i], &endptr, 10);
 
