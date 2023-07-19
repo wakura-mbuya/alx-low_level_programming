@@ -37,7 +37,6 @@ char *_strdup(char *str)
 		}
 		i++;
 	}
-	arr[i] = '\n';
 
 	return (arr);
 }
