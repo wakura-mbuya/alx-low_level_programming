@@ -23,7 +23,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	arr = (char *)malloc(sizeof(str));
+	arr = (char *)malloc(sizeof(str) + sizeof('\n'));
 	i = 0;
 
 	while (i < strlen(str))
