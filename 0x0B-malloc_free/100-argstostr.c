@@ -25,7 +25,7 @@ char *argstostr(int ac, char **av)
 		c++;
 	}
 
-	a_out = malloc((c +1) * sizeof(char));
+	a_out = malloc((c + 1) * sizeof(char));
 	if (a_out == NULL)
 	{
 		free(a_out);
