@@ -11,7 +11,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i, k, limit, len1, len2, j;
+	unsigned int i, k, limit, j;
 	char *str_;
 
 	if (s1 == NULL)
@@ -35,7 +35,7 @@ char *str_concat(char *s1, char *s2)
 		free(str_)
 		return (NULL);
 
-	for (k = 0; i < i; k++)
+	for (k = 0; k < i; k++)
 		str_[k] = s1[i];
 	
 	limit = j;
