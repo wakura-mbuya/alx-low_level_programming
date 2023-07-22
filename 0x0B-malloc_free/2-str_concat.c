@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 		len1 = 0;
 	else
 	{
-		for (i = 0; s1[i] != NULL; i++)
+		for (i = 0; s1[i] != '\0'; i++)
 			;
 		len1 = i;
 	}
@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 		len2 = 0;
 	else
 	{
-		for (i = 0; s2[i] != NULL; i++)
+		for (i = 0; s2[i] != '\0'; i++)
 			;
 		len2 = i + 1;
 	}
