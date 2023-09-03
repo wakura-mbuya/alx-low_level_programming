@@ -16,7 +16,7 @@ void print_triangle(int size)
 
 	if (size < 1)
 	{
-		_putchar("\n");
+		_putchar('\n');
 	}
 	else
 	{
@@ -26,10 +26,11 @@ void print_triangle(int size)
 			{
 				z = size - x - 1;
 				if (y < z)
-					_putchar(" ");
+					_putchar(' ');
 				else
-					_putchar("#");
+					_putchar('#');
 			}
+			_putchar('\n');
 		}
 	}
 }
