@@ -10,8 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	while (argc--)
+		printf("%s\n", *argv++);
 
-	for (i = 0; i < argc; i++)
-		printf("%s\n", argv[i]);
+	return (0);
 }
