@@ -29,15 +29,12 @@ int _strcmp(char *s1, char *s2)
 		return (-15);
 	else if (len1 > len2)
 		return (15);
-	else
+	while (*s1 != '\0')
 	{
-		while (*s1 != '\0')
-		{
-			if (*s1 != *s2)
-				return (15);
-			s2++;
-			s1++;
-		}
+		if (*s1 != *s2)
+			return (15);
+		s2++;
+		s1++;
 	}
 	return (0);
 }
