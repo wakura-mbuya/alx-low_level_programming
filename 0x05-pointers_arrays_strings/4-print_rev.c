@@ -12,6 +12,7 @@ void print_rev(char *s)
 	while (*s++) /* length of s*/
 		count++;
 
+	s--;	/* to skip the null terminator */
 	for (; count >= 0; count--)
 	{
 		s--;
