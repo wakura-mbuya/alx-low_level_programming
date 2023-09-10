@@ -8,7 +8,7 @@
  */
 void print_rev(char *s)
 {
-	int cnt = 0, count = 0;	/* lenghth of the string */
+	int count = 0;	/* lenghth of the string */
 
 	while (*s++) /* length of s*/
 		count++;
@@ -17,7 +17,7 @@ void print_rev(char *s)
 	for (; count > 0; --count)
 	{
 		s--;
-		_putchar(*);
+		_putchar(*s);
 	}
 	_putchar('\n');
 }
