@@ -6,12 +6,11 @@
  */
 void rev_string(char *s)
 {
-	char * start, * end;	/* pointers to th start and end of the string */
+	char *start, *end;	/* pointers to th start and end of the string */
 	char temp;
 
 	start = s;
 	end = s;
-	
 	/* move the end pointer to the end of the string */
 	while (*end != '\0')
 		end++;
