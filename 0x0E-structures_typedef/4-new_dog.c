@@ -12,11 +12,12 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t my_dog;
+	dog_t my_dog, *ptr;
 
-	strcpy(my_dog.name, name);
-	strcpy(my_dog.owner, owner);
+	ptr = &my_dog;
+	my_dog.name = name;
+	my_dog.owner = owner;
 	my_dog.age = age;
 
-	return (&my_dog);
+	return (ptr);
 }
