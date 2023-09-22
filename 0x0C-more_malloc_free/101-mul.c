@@ -8,7 +8,6 @@
  * @argv: argument vector.
  *
  * Return: no return.
- * @author: wakura (Modified code sample from a Github user)
  */
 void _is_zero(char *argv[])
 {
