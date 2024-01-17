@@ -14,15 +14,15 @@ char *_strdup(char *str)
 	char *_str;	/* stores a copy of str */
 	unsigned int i;	/* for iterating the while loop */
 
+	if (str == NULL)
+		return (NULL);	/* returns Null if str is NULL */
+
 	/* get the length of str */
 	length = 0;
 	while (str[length] != '\0')
 		length++;
 	length++;
-
-	if (str == NULL)
-		return (NULL);	/* returns Null if str is NULL */
-
+	
 	/* Allocate memory */
 	_str = malloc(length);
 	if (_str == NULL)
