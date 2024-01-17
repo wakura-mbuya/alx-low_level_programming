@@ -10,7 +10,7 @@
  */
 char *_strdup(char *str)
 {
-	unsignedd int length;	/* lenght of str */
+	unsigned int length;	/* lenght of str */
 	char *_str;	/* stores a copy of str */
 	int i;	/* for iterating the while loop */
 
