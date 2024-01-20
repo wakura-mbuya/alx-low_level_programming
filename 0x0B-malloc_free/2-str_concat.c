@@ -11,7 +11,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *str_; /* concatenated string */
+	char *str; /* concatenated string */
 	unsigned int l1, l2, i;	/* length of str 1 & 2, i for loop iteration */
 
 	l1 = 0;
