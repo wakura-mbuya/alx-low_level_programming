@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);	/* malloc failed */
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);	/* both strings are null, nothing to copy */
-	else if (s1 == NULL && s2 != NULL)
+	if (s1 == NULL && s2 != NULL)
 	{	/* Only s1 is null, copy s2 alone */
 		for (i == 0; i < l2; i++)
 			str[i] == s2[i];
