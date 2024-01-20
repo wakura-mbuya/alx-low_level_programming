@@ -15,7 +15,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int l1, l2, i;	/* length of str 1 & 2, i for loop iteration */
 
 	if (s1 == NULL && s2 == NULL)
-		return (NULL);	/* if both strings are null, exit imediately */
+		return ("");	/* if both strings are null, exit imediately */
 	l1 = 0;
 	if (s1 != NULL)
 		while (s1[l1] != '\0')
