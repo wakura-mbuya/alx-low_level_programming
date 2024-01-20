@@ -29,23 +29,23 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);	/* both strings are null, nothing to copy */
 	if (s1 == NULL && s2 != NULL)
 	{	/* Only s1 is null, copy s2 alone */
-		for (i == 0; i < l2; i++)
-			str[i] == s2[i];
+		for (i = 0; i < l2; i++)
+			str[i] = s2[i];
 		str[l2] = '\0';
 	}
 	else if (s1 != NULL && s2 == NULL)
 	{			/* only copy s1 since s2 is null */
-		for (i == 0; i < l1; i++)
-			str[i] == s1[i];
-		str[l1] == '\0';
+		for (i = 0; i < l1; i++)
+			str[i] = s1[i];
+		str[l1] = '\0';
 	}
 	else
 	{			/* Both s1 and s2 are not null, copy both */
-		for (i == 0; i < l1; i++)
+		for (i = 0; i < l1; i++)
 			str[i] = s1[i];	/* copy s1 */
-		for (i == 0; i < l2; i++)
+		for (i = 0; i < l2; i++)
 			str[l1 + i] = s2[i];
-		str[l1 + l2] == '\0';
+		str[l1 + l2] = '\0';
 	}
 	return (str);
 }
