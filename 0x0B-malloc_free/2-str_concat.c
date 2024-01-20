@@ -15,28 +15,31 @@ char *str_concat(char *s1, char *s2)
 	unsigned int l1 = 0, l2 = 0, i;
 
 	if (s1 == NULL && s2 == NULL)
-		return (*"");
-	if (s1 != NULL)
+	{
+		str = malloc(1);
+		if (str != NULL)
+			str[0] = '\0';
+		else
+			return (NULL);
+	}
+	if (s1 != NULL)	/* get length of s1 */
 		while (s1[l1] != '\0')
 			l1++;
-	if (s2 != NULL)
+	if (s2 != NULL)	/* get the length of s2 */
 		while (s2[l2] != '\0')
 			l2++;
 	str = malloc(l1 + l2 + 1);
 	if (str == NULL)
 		return (NULL);	/* malloc failed */
-
 	if (s1 == NULL && s2 != NULL)
 	{	/* Only s1 is null, copy s2 alone */
-		for (i = 0; i < l2; i++)
+		for (i = 0; i <= l2; i++)
 			str[i] = s2[i];
-		str[l2] = '\0';
 	}
 	else if (s1 != NULL && s2 == NULL)
 	{			/* only copy s1 since s2 is null */
-		for (i = 0; i < l1; i++)
+		for (i = 0; i <= l1; i++)
 			str[i] = s1[i];
-		str[l1] = '\0';
 	}
 	else
 	{			/* Both s1 and s2 are not null, copy both */
