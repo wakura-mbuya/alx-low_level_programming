@@ -7,36 +7,24 @@
 
 int main(void)
 {
-	int i, j, k, l;
-
-	for (i  = 0; i < 10; ++i)
+	int a, b;	/* first and second numbers */
+	for (a = 0; a <= 98; a++)
 	{
-		for (j = 0; j < 10; ++j)
+		for (b = a + 1; b <= 99; b++)
 		{
-			for (k = i; k < 10; ++k)
-			{
-				for (l = j + 1; l < 10; ++l)
-				{
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(32);
-					putchar(k + '0');
-					putchar(l + '0');
+			putchar(a / 10 + '0');
+			putchar(a % 10 + '0');
+			putchar(' ');
+			putchar(b / 10 + '0');
+			putchar(b % 10 + '0');
 
-					if ((i == 9) && (j == 8) && (k == l))
-					{
-						continue;
-					}
-					else
-					{
-						putchar(44);
-						putchar(32);
-					}
-				}
-			}
+			if (a == 98 && b == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
-	putchar(10);
-	return (0);
+	putchar('\n');
 
 }
