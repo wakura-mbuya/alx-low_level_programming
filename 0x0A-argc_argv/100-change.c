@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 		_2 = _5 % 2;
 		change += _2;
 	}
-	printf("%d\n", change);
+	printf("%d", change);
 	return (0);
 }
 
