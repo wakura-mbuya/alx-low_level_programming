@@ -22,7 +22,10 @@ int main(int argc, char **argv)
 
 	/* check if at least one number is passed */
 	if (argc <= 2)
+	{
 		printf("%d\n", 0);
+		return (0);
+	}
 	else
 	{
 		/* at least one int passed, convert each of them one by one */
