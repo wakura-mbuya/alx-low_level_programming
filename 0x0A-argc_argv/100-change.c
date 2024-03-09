@@ -27,7 +27,10 @@ int main(int argc, char **argv)
 
 	cents = atoi(argv[1]);
 	if (cents < 0)
+	{
 		printf("%d\n", 0);
+		return (0);
+	}
 	else
 	{
 		change += (cents / 25);
@@ -40,7 +43,7 @@ int main(int argc, char **argv)
 		_2 = _5 % 2;
 		change += _2;
 	}
-	printf("%d", change);
+	printf("%d\n", change);
 	return (0);
 }
 
