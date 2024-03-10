@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 	/* add the length for the new line character to be added */
 	args_length += ac;
 	/* allocate memory for the args string */
-	args_str = (char *)malloc(args_length * sizeof(char));
+	args_str = (char *)malloc((1 + args_length) * sizeof(char));
 	if (args_str == NULL)
 		return (NULL);	/* malloc has failed */
 	/* copy the args to the new string one by one */
@@ -42,11 +42,8 @@ char *argstostr(int ac, char **av)
 			i_length++;
 		}
 
-		if (k < args_length - 1)
-		{
-			k++;
-			args_str[k] = '\n';
-		}
+		k++;
+		args_str[k] = '\n';
 		k++;
 	}
 	return (args_str);
