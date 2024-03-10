@@ -10,56 +10,44 @@
  */
 char *argstostr(int ac, char **av)
 {
-	size_t i, j, cnt; /* for loops iteration */
-	size_t i_length; /* length of one arg */
-	size_t args_length; /* length of all the args */
+	int i, k, i_length, args_length;	/* for loops iteration */
 	char *args_str;	/* a string containing all the args */
-	char *a;	/* one of the arguments passed */
 
-	cnt = ac;
-
-	/* check if there are arguments passed */
 	if (ac == 0 || av == NULL)
 		return (NULL);
-
 	/* Get the length of all the args */
 	args_length = 0;
-	for (i = 0; i < cnt; i++)
+	for (i = 0; i < ac; i++)
 	{
-		a = av[i];
-		/* get the length of a single arg */
 		i_length = 0;
-		while (a[i_length] != '\0')
-		{
+		while (av[i][i_length] != '\0')
 			i_length++;
-		}
-
-		/* add the length of this arg to the total length */
 		args_length += i_length;
 	}
-
 	/* add the length for the new line character to be added */
 	args_length += ac;
-
 	/* allocate memory for the args string */
 	args_str = (char *)malloc(args_length * sizeof(char));
 	if (args_str == NULL)
 		return (NULL);	/* malloc has failed */
-
 	/* copy the args to the new string one by one */
-	i = 0;
-	while (i < args_length)
+	k = 0;
+	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; j < cnt; j++)
+		i_length = 0;
+		while (av[i][i_length] != '\0')
 		{
-			while (*av[j] != '\0')
-			{
-				args_str[i] = *av[j];
-				av[j]++;
-				i++;
-			}
-			args_str[i] = '\n';
+			args_str[k] = av[i][i_length];
+			k++;
+			i_length++;
 		}
+
+		if (k < args_length - 1)
+		{
+			k++;
+			args_str(k) = '\n';
+		}
+		k++;
 	}
 	return (args_str);
 }
