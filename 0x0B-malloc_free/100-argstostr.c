@@ -14,6 +14,7 @@ char *argstostr(int ac, char **av)
 	size_t i_length; /* length of one arg */
 	size_t args_length; /* length of all the args */
 	char *args_str;	/* a string containing all the args */
+	char *a;	/* one of the arguments passed */
 
 	cnt = ac;
 
@@ -25,12 +26,12 @@ char *argstostr(int ac, char **av)
 	args_length = 0;
 	for (i = 0; i < cnt; i++)
 	{
+		a = av[i];
 		/* get the length of a single arg */
 		i_length = 0;
-		while (*av[i] != '\0')
+		while (a[i_length] != '\0')
 		{
 			i_length++;
-			av[i]++;
 		}
 
 		/* add the length of this arg to the total length */
