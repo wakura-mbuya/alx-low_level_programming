@@ -28,7 +28,12 @@ int **alloc_grid(int width, int height)
 	{
 		grid[i] = (int *)malloc(width * sizeof(int));
 		if (grid[i] == NULL)
+		{
+			for (j = 0; j < i; j++)
+				free(grid[j]);
+			free(grid);
 			return (NULL);	/*malloc failed*/
+		}
 	}
 
 	/*initialize the 2D array elements to 0*/
