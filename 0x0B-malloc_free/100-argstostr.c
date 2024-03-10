@@ -45,7 +45,7 @@ char *argstostr(int ac, char **av)
 		if (k < args_length - 1)
 		{
 			k++;
-			args_str(k) = '\n';
+			args_str[k] = '\n';
 		}
 		k++;
 	}
