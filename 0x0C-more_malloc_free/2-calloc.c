@@ -22,7 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nums == NULL)
 		return (NULL); /* malloc failed */
 
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < (nmemb * size); i++)
 		nums[i] = 0;
 	return (nums);
 }
